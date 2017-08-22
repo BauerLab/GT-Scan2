@@ -1,27 +1,10 @@
-# Analysis for "Chromatin environment informs CRISPR-Cas9 system activity"
+# GT-Scan2 workflow
 
----
+**data** contains the data files used to construct and test the model
 
-Data and code to reproduce the analysis performed in **"Chromatin environment informs CRISPR-Cas9 system activity"** are available in this repository.
+- Chari.featureTable.txt: feature matrix for the Chari et al 2015 dataset
+- Chari.scores.txt: WU-CRISPR, sgRNA Scorer and Azimuth scores for the Chari et al 2015 dataset
+- Horlbeck.featureTable.txt: feature matrix for the Horlbeck et al 2016 dataset
+- Horlbeck.scores.txt: WU-CRISPR, sgRNA Scorer and Azimuth scores for the Horlbeck et al 2016 dataset
 
----
-### Data
-
-Feature tables for the four different datasetes are collected in **Data/**
-
-The following information is collected for each Cas9 target site:
-
-1. Predicted Activity score from sgRNAscorer
-2. Predicted Activity score from WU-CRISPR
-3. Predicted Activity score from Combined sgRNAscorer and WU-CRISPR scores
-4. Experimentally determined score
-5. Target site activity class (0=Low, 1=High)
-6. Intersect information of the target site with 32 chromatin marks from **Ernst & Kellis, Nature Biotech (2015)** 
-
----
-### Code
-The analysis script for construction and testing of the model is outlined in **Results/Workflow.R**
-
----
-### Results
-Output of **Results/Workflow.R** are stored in **Results/**
+**code/GT-Scan2.final.R** workflow for construction and testing of model
